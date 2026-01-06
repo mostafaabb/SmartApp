@@ -1,0 +1,33 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" rx="128" fill="#2563EB"/>
+
+  <!-- Car silhouette -->
+  <g transform="translate(128, 192)">
+    <!-- Car body -->
+    <path d="M256 64 C256 48, 240 32, 224 32 L96 32 C80 32, 64 48, 64 64 L64 96 L288 96 L288 64 Z" fill="white"/>
+    <!-- Car roof -->
+    <rect x="80" y="32" width="160" height="32" rx="8" fill="white"/>
+    <!-- Wheels -->
+    <circle cx="96" cy="96" r="16" fill="#1E40AF"/>
+    <circle cx="224" cy="96" r="16" fill="#1E40AF"/>
+    <circle cx="96" cy="96" r="8" fill="white"/>
+    <circle cx="224" cy="96" r="8" fill="white"/>
+  </g>
+
+  <!-- Health indicators -->
+  <g transform="translate(320, 160)">
+    <!-- Battery -->
+    <rect x="0" y="8" width="32" height="16" rx="2" fill="none" stroke="white" stroke-width="2"/>
+    <rect x="32" y="12" width="4" height="8" fill="white"/>
+    <rect x="4" y="12" width="20" height="8" fill="#10B981"/>
+    <!-- Engine temp -->
+    <circle cx="16" cy="48" r="8" fill="none" stroke="white" stroke-width="2"/>
+    <path d="M16 36 L16 44 L20 40 Z" fill="white"/>
+    <rect x="14" y="52" width="4" height="12" fill="#F59E0B"/>
+  </g>
+
+  <!-- App name -->
+  <text x="256" y="400" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">SMART</text>
+  <text x="256" y="428" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16">VEHICLE</text>
+</svg>
