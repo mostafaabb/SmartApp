@@ -25,7 +25,7 @@ dependencies:
 
   # Charts & Data Visualization
   fl_chart: ^0.66.1
-  syncfusion_flutter_charts: ^24.2.9
+  syncfusion_flutter_charts: any
 
   # Hardware & Connectivity
   flutter_blue_plus: ^1.32.8
@@ -42,9 +42,12 @@ dependencies:
   firebase_messaging: ^14.7.10
 
   # Utilities
-  intl: ^0.19.0
+  intl: ^0.20.2
   cached_network_image: ^3.3.1
   path_provider: ^2.1.3
+  url_launcher: ^6.2.5
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
@@ -53,6 +56,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   # Assets
   assets:

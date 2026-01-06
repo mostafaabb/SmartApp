@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../l10n/generated/app_localizations.dart';
 import '../../core/themes/app_colors.dart';
 import '../../providers/vehicle_provider.dart';
+import '../../core/services/notification_service.dart';
 import '../mechanics_screen.dart';
 import '../profile_screen.dart';
 import 'analytics_screen.dart';
@@ -23,6 +25,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
   void initState() {
     super.initState();
     _selectedIndex = widget.initialIndex;
+    _initNotifications();
+  }
+
+  Future<void> _initNotifications() async {
+    await NotificationService().initialize();
   }
 
   final List<Widget> _screens = [
@@ -46,14 +53,15 @@ class _DashboardScreenState extends State<DashboardScreen> {
             left: 20,
             right: 20,
             bottom: 20,
-            child: _buildFloatingNavBar(),
+            child: _buildFloatingNavBar(context),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildFloatingNavBar() {
+  Widget _buildFloatingNavBar(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
     return Container(
       height: 70,
       decoration: BoxDecoration(
@@ -78,10 +86,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            _buildNavItem(0, Icons.dashboard_rounded, 'Home'),
-            _buildNavItem(1, Icons.analytics_rounded, 'Stats'),
-            _buildNavItem(2, Icons.build_rounded, 'Garage'),
-            _buildNavItem(3, Icons.person_rounded, 'Profile'),
+            _buildNavItem(0, Icons.dashboard_rounded, l10n.dashboard),
+            _buildNavItem(1, Icons.analytics_rounded, l10n.analytics),
+            _buildNavItem(2, Icons.build_rounded, l10n.mechanics),
+            _buildNavItem(3, Icons.person_rounded, l10n.profile),
           ],
         ),
       ),
@@ -127,7 +135,3 @@ class _DashboardScreenState extends State<DashboardScreen> {
     );
   }
 }
-
-
-
-
