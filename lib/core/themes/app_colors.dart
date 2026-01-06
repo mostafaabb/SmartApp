@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+class AppColors {
   // Primary Colors (Deep Indigo / Electric Blue)
   static const Color primary = Color(0xFF6366F1);
   static const Color primaryLight = Color(0xFF818CF8);
@@ -40,6 +41,16 @@ import 'package:flutter/material.dart';
   // Border Colors
   static const Color border = Color(0xFFE2E8F0);
   static const Color borderDark = Color(0xFF334155);
+
+  // Input Colors
+  static const Color inputBackground = Color(0xFFF1F5F9);
+  static const Color inputBackgroundDark = Color(0xFF1E293B);
+  static const Color inputBorder = Color(0xFFE2E8F0);
+  static const Color inputBorderDark = Color(0xFF334155);
+
+  // Card Shadow Colors
+  static const Color cardShadowColor = Color(0x1F000000);
+  static const Color cardShadowColorDark = Color(0x66000000);
 
   // Gradients
   static const LinearGradient primaryGradient = LinearGradient(
